@@ -1,0 +1,193 @@
+/* 🎀 Estilo delicado para o portfólio da Beatriz */
+
+body {
+font-family: 'Poppins', sans-serif;
+background-color: #fff7fa; /* fundo rosado bem claro */
+color: #4b4b4b;
+margin: 0;
+padding: 0;
+line-height: 1.6;
+}
+
+/* 💫 Cabeçalho */
+header {
+background-color: #d8b4e2; /* lilás suave */
+color: #ffffff;
+text-align: center;
+padding: 50px 20px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 🌸 Seção Sobre mim */
+#sobre {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #ffffff;
+padding: 50px;
+border-radius: 12px;
+box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.sobre-container {
+display: flex;
+align-items: center;
+gap: 40px; /* espaço entre a foto e o texto */
+max-width: 900px;
+}
+
+#sobre img {
+width: 220px;
+border-radius: 12px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.texto-sobre {
+max-width: 550px;
+}
+
+.texto-sobre h2 {
+color: #7b4ba0;
+margin-bottom: 15px;
+border-bottom: 2px solid #d8b4e2;
+display: inline-block;
+padding-bottom: 6px;
+}
+
+.texto-sobre p {
+color: #4b4b4b;
+font-size: 1.1em;
+line-height: 1.7;
+}
+.sobre-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+#sobre img {
+width: 180px;
+}
+header h1 {
+font-size: 2.5em;
+margin-bottom: 10px;
+}
+
+header p {
+font-size: 1.1em;
+}
+
+/* 🌸 Menu */
+nav {
+background-color: #f5e9f7;
+text-align: center;
+padding: 12px 0;
+border-top: 1px solid #e2cfea;
+border-bottom: 1px solid #e2cfea;
+}
+
+nav a {
+color: #7b4ba0;
+text-decoration: none;
+margin: 0 20px;
+font-weight: 500;
+transition: color 0.3s ease;
+}
+
+nav a:hover {
+color: #a46bc7;
+}
+
+/* 🪞 Seções */
+section {
+padding: 40px 60px;
+max-width: 900px;
+margin: 40px auto;
+background-color: #ffffff;
+border-radius: 12px;
+box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+/* ✨ Títulos */
+h2 {
+color: #7b4ba0;
+border-bottom: 2px solid #d8b4e2;
+display: inline-block;
+padding-bottom: 6px;
+margin-bottom: 20px;
+font-weight: 600;
+}
+
+/* 💼 Projetos */
+.project {
+background: #fdf9ff;
+border: 1px solid #e8d8f1;
+border-radius: 10px;
+padding: 20px;
+margin-bottom: 20px;
+transition: transform 0.2s ease;
+}
+
+.project:hover {
+transform: scale(1.02);
+}
+
+.project a {
+color: #7b4ba0;
+text-decoration: none;
+font-weight: bold;
+}
+
+.project a:hover {
+color: #a46bc7;
+}
+
+/* 📸 Imagem do perfil */
+#sobre img {
+border-radius: 12px;
+width: 200px;
+margin-right: 20px;
+float: left;
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* 📬 Rodapé */
+footer {
+background: #d8b4e2;
+color: white;
+text-align: center;
+padding: 20px;
+margin-top: 60px;
+font-size: 0.95em;
+}
+
+footer a {
+color: #fffbe9;
+text-decoration: none;
+font-weight: bold;
+}
+
+footer a:hover {
+text-decoration: underline;
+}
+
+/* 🩰 Ajustes para celular */
+@media (max-width: 768px) {
+section {
+padding: 20px;
+}
+
+#sobre img {
+float: none;
+display: block;
+margin: 0 auto 20px auto;
+}
+
+nav a {
+display: inline-block;
+margin: 8px;
+}
+}
