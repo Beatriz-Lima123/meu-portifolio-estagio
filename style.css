@@ -1,26 +1,8 @@
 /* 🎀 Estilo delicado para o portfólio da Beatriz */
 
-:root {
-    --spacing-small: 8px;
-    --spacing-medium: 16px;
-    --spacing-large: 32px;
-    --primary-color: #7b4ba0;
-    --secondary-color: #d8b4e2;
-    --background-color: #fff7fa;
-    --link-color: #a46bc7;
-}
-
-/* Definir box-sizing para todas as caixas */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/* 💫 Corpo e Tipografia */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--background-color);
+    background-color: #fff7fa; /* fundo rosado bem claro */
     color: #4b4b4b;
     margin: 0;
     padding: 0;
@@ -29,21 +11,11 @@ body {
 
 /* 💫 Cabeçalho */
 header {
-    background-color: var(--secondary-color);
-    color: white;
+    background-color: #d8b4e2; /* lilás suave */
+    color: #ffffff;
     text-align: center;
-    padding: var(--spacing-large) var(--spacing-small);
+    padding: 50px 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-/* 🎀 Títulos e texto do cabeçalho */
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.1em;
 }
 
 /* 🌸 Seção Sobre mim */
@@ -51,26 +23,26 @@ header p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    padding: var(--spacing-large);
+    background-color: #ffffff;
+    padding: 50px;
     border-radius: 12px;
     box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    flex-wrap: wrap;  /* Isso ajuda a reorganizar os itens no mobile */
 }
 
 .sobre-container {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 40px; /* espaço entre a foto e o texto */
     max-width: 900px;
     margin: 0 auto;
+    flex-direction: row; /* Coloca a imagem à esquerda e o texto à direita */
 }
 
 #sobre img {
-    width: 180px;
+    width: 220px;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    display: block;
-    margin: 0 auto 20px auto;
 }
 
 .texto-sobre {
@@ -78,9 +50,9 @@ header p {
 }
 
 .texto-sobre h2 {
-    color: var(--primary-color);
+    color: #7b4ba0;
     margin-bottom: 15px;
-    border-bottom: 2px solid var(--secondary-color);
+    border-bottom: 2px solid #d8b4e2;
     display: inline-block;
     padding-bottom: 6px;
 }
@@ -91,89 +63,126 @@ header p {
     line-height: 1.7;
 }
 
-/* 💼 Menu de navegação */
+/* Ajustes para celular */
+@media (max-width: 768px) {
+    /* Ajuste para o conteúdo da página */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    #sobre {
+        flex-direction: column; /* Coloca a imagem em cima do texto no celular */
+        padding: 20px;
+    }
+
+    .sobre-container {
+        flex-direction: column; /* Organiza os itens verticalmente */
+        gap: 20px; /* Diminui o espaço entre a imagem e o texto */
+        width: 100%;
+    }
+
+    #sobre img {
+        width: 150px; /* Ajusta o tamanho da imagem no celular */
+        margin-bottom: 20px;
+    }
+
+    /* Ajuste no menu para celular */
+    nav {
+        padding: 10px 0;
+    }
+
+    nav a {
+        display: block; /* Alinha os links em blocos no celular */
+        margin: 8px 0;
+    }
+}
+
+/* 🌸 Menu */
 nav {
     background-color: #f5e9f7;
     text-align: center;
-    padding: var(--spacing-small) 0;
+    padding: 12px 0;
     border-top: 1px solid #e2cfea;
     border-bottom: 1px solid #e2cfea;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
 }
 
 nav a {
-    color: var(--primary-color);
+    color: #7b4ba0;
     text-decoration: none;
+    margin: 0 20px;
     font-weight: 500;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: var(--link-color);
-    transform: scale(1.05);
+    color: #a46bc7;
 }
 
 /* 🪞 Seções */
 section {
-    padding: var(--spacing-large);
+    padding: 40px 60px;
     max-width: 900px;
-    margin: var(--spacing-medium) auto;
-    background-color: white;
+    margin: 40px auto;
+    background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 3px 8px rgba(0,0,0,0.05);
 }
 
-/* ✨ Títulos das seções */
+/* ✨ Títulos */
 h2 {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--secondary-color);
+    color: #7b4ba0;
+    border-bottom: 2px solid #d8b4e2;
     display: inline-block;
     padding-bottom: 6px;
     margin-bottom: 20px;
     font-weight: 600;
 }
 
-/* 💻 Projetos */
-.projeto {
+/* 💼 Projetos */
+.project {
     background: #fdf9ff;
     border: 1px solid #e8d8f1;
     border-radius: 10px;
-    padding: var(--spacing-medium);
-    margin-bottom: var(--spacing-medium);
+    padding: 20px;
+    margin-bottom: 20px;
     transition: transform 0.2s ease;
 }
 
-.projeto:hover {
+.project:hover {
     transform: scale(1.02);
 }
 
-.projeto a {
-    color: var(--primary-color);
+.project a {
+    color: #7b4ba0;
     text-decoration: none;
     font-weight: bold;
 }
 
-.projeto a:hover {
-    color: var(--link-color);
+.project a:hover {
+    color: #a46bc7;
 }
 
 /* 📸 Imagem do perfil */
 #sobre img {
     border-radius: 12px;
     width: 200px;
-    margin-right: var(--spacing-medium);
+    margin-right: 20px;
     float: left;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* 📬 Rodapé */
 footer {
-    background: var(--secondary-color);
+    background: #d8b4e2;
     color: white;
     text-align: center;
-    padding: var(--spacing-small);
+    padding: 20px;
     margin-top: 60px;
     font-size: 0.95em;
 }
@@ -186,40 +195,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-/* 🩰 Ajustes para celular */
-@media (max-width: 768px) {
-    /* Ajuste nas seções */
-    section {
-        padding: var(--spacing-medium);
-        margin: var(--spacing-small) auto;
-    }
-
-    /* Ajustar a largura da imagem */
-    #sobre img {
-        width: 150px;
-        margin: 0 auto 20px;
-        float: none;
-        display: block;
-    }
-
-    /* Navegação */
-    nav a {
-        font-size: 1em;
-        display: inline-block;
-        margin: var(--spacing-small);
-    }
-
-    /* Cabeçalho */
-    header h1 {
-        font-size: 2em;
-    }
-
-    /* Ajustes em botões ou inputs */
-    input, textarea {
-        width: 100%;
-        padding: 10px;
-        margin: var(--spacing-small) 0;
-    }
 }
